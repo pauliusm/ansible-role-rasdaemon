@@ -1,0 +1,22 @@
+galaxy_info:
+  author: Paulius Mazeika
+  description: Installs and sets up rasdaemon
+  licence: BSD
+  min_ansible_version: 2.7
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - rasdaemon
+    - ras
+    - mcelog
+    - edac
+    - memory
+    - ram
+    - pauliusm
+
+dependencies: []

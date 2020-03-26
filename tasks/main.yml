@@ -1,0 +1,36 @@
+---
+
+- name: Source vars
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+  tags: init
+
+- name: Install rasdaemon
+  package:
+    pkg: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ rasdaemon_packages }}"
+  tags: install
+
+- name: Enable RAS tracing events
+  shell: rasdaemon --enable
+  tags: enable_events
+
+- name: Start rasdaemon service
+  service:
+    name: "{{ rasdaemon_service }}"
+    state: started
+  tags: start
+
+- name: Enable rasdaemon service
+  service:
+    name: "{{ rasdaemon_service }}"
+    enabled: true
+  tags: enable
+
+- name: Register DIMM labels
+  shell: ras-mc-ctl --register-labels
+  tags: register

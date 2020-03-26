@@ -1,0 +1,6 @@
+---
+
+rasdaemon_packages:
+  - rasdaemon
+
+rasdaemon_service: 'rasdaemon'
