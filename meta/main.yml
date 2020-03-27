@@ -3,6 +3,7 @@ galaxy_info:
   description: Installs and sets up rasdaemon
   license: BSD
   min_ansible_version: 2.7
+  role_name: rasdaemon
 
   platforms:
     - name: EL
