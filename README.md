@@ -29,6 +29,9 @@ Example Playbook
 Testing
 -------
 
+Testing is quite interesting, as it requires real hardware.
+Use [run-docker-tests.sh](tests/run-docker-tests.sh) to test some things in docker.
+
 License
 -------
 

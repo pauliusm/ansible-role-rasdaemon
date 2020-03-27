@@ -1,7 +1,7 @@
 galaxy_info:
   author: Paulius Mazeika
   description: Installs and sets up rasdaemon
-  licence: BSD
+  license: BSD
   min_ansible_version: 2.7
 
   platforms:

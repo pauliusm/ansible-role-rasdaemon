@@ -16,8 +16,9 @@
   tags: install
 
 - name: Enable RAS tracing events
-  shell: rasdaemon --enable
+  command: rasdaemon --enable
   tags: enable_events
+  changed_when: False
 
 - name: Start rasdaemon service
   service:
@@ -32,5 +33,6 @@
   tags: enable
 
 - name: Register DIMM labels
-  shell: ras-mc-ctl --register-labels
+  command: ras-mc-ctl --register-labels
   tags: register
+  changed_when: False
